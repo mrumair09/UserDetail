@@ -40,7 +40,7 @@ class UserTableCell: UITableViewCell {
             } else {
 
                 if let res = response as? HTTPURLResponse {
-                    print("Downloaded picture with response code \(res.statusCode)")
+                    //print("Downloaded picture with response code \(res.statusCode)")
                     if let imageData = data {
                         // Finally convert that Data into an image and do what you wish with it.
                         DispatchQueue.main.async {

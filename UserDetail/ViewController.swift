@@ -88,20 +88,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(indexPath.row)
        // print(recordsArray.count)
         
-        if userSearchbar.inputAccessoryView == nil {
+        if userSearchbar.searchTextField.text?.isEmpty == true {
             
             DispatchQueue.main.async { [self] in
                 if self.filter.count - 1 == indexPath.row {
                     if self.filter.count < self.array.count {
-                        // we need to bring more records as there are some pending records available
+
                         var index = self.filter.count
                         self.limit = index + 5
                         while index < limit && index < array.count {
                             
                             filter.append(array[index])
+                            recordsArray.append(array[index])
                             index = index + 1
                         }
-                        
                             self.userTableView.reloadData()
                         }
                     }
