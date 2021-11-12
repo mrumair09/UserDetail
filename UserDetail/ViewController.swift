@@ -76,9 +76,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             vc.userNameLabel.text = self.filter[indexPath.row].login
             vc.nameLabel.text = self.filter[indexPath.row].login
             
-            let urlString = self.filter[indexPath.row].organizationsURL
-            let output = urlString?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            //vc.getOrgnizationData(url: output ?? "")
+//            let urlString = self.filter[indexPath.row].organizationsURL
+//            let output = urlString?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+//            vc.getOrgnizationData(url: output ?? "")
             
         }
         self.present(vc, animated: true, completion: nil)
